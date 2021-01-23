@@ -1,0 +1,32 @@
+public class Main
+{
+	public static void main(String[] args) {
+		printPattern(5,1,1);
+	}
+	
+	static void printt(int i,int j)
+	{
+	    if(i==0)
+	    return;
+	    System.out.print(j);
+	    printt(--i,++j);
+	}
+	
+	static void printPattern(int n,int i,int j)
+	{
+	    if(i>n)
+	    return;
+	    printt(i,j);
+	    System.out.println();
+	    j=i+j;
+	    printPattern(n,++i,j);
+	    return;
+	}
+}
+
+
+Output
+1 
+23
+456
+78910
